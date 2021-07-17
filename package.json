@@ -1,6 +1,12 @@
 {
   "name": "root",
   "private": true,
+  "files": [
+    "lib",
+    "es",
+    "packages",
+    "style"
+  ],
   "scripts": {
     "build": "rollup --config ./build/rollup.config.js"
   },
