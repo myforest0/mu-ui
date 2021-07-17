@@ -10,6 +10,7 @@
 ```
 npm install resonance-ui
 ```
+or
 ```
 yarn add resonance-ui
 ```
@@ -27,5 +28,5 @@ const App = () => (
 ```
 ## 并手动导入样式
 ```
-import 'resonance-ui/dist/resonance-ui.css'; // or 'resonance-ui/dist/resonance-ui.less'
+import 'resonance-ui/style/index.css';
 ```
