@@ -4,11 +4,12 @@
   "files": [
     "lib",
     "es",
-    "styles",
+    "style",
     "packages"
   ],
   "scripts": {
-    "build": "rollup --config ./build/rollup.config.js"
+    "build:component": "rollup --config ./build/build.component.js",
+    "build:less": "gulp build --gulpfile ./build/build.less.js"
   },
   "devDependencies": {
     "@babel/core": "^7.14.6",
@@ -19,6 +20,9 @@
     "@rollup/plugin-json": "^4.1.0",
     "@rollup/plugin-node-resolve": "^13.0.2",
     "@types/react": "^17.0.14",
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-less": "^5.0.0",
     "lerna": "^4.0.0",
     "less": "^4.1.1",
     "postcss": "^8.3.5",

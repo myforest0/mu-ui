@@ -11,6 +11,7 @@
 # production
 /es
 /lib
+/style
 
 # misc
 .DS_Store
