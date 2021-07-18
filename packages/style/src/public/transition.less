@@ -1,0 +1,127 @@
+@transition: cubic-bezier(0.23, 1, 0.32, 1);
+
+/*---------------------------------------scale-------------------------------------------*/
+
+.rs-transition-scale-enter {
+    opacity: 0;
+    transform: scale(0.75);
+}
+
+.rs-transition-scale-enter-active {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.rs-transition-scale-exit {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.rs-transition-scale-exit-active {
+    opacity: 0;
+    transform: scale(0.75);
+}
+
+.rs-transition-scale-enter-active, .rs-transition-scale-exit-active {
+    transition: opacity 300ms linear, transform 300ms @transition;
+}
+
+/*---------------------------------------scale-y-------------------------------------------*/
+
+.rs-transition-scale-y-enter {
+    transform: scaleY(0);
+    opacity: 0;
+}
+
+.rs-transition-scale-y-enter-active {
+    transform: scaleY(1);
+    opacity: 1;
+}
+
+.rs-transition-scale-y-exit {
+    transform: scaleY(1);
+    opacity: 1;
+}
+
+.rs-transition-scale-y-exit-active {
+    transform: scaleY(0);
+    opacity: 0;
+}
+
+.rs-transition-scale-y-enter-active, .rs-transition-scale-y-exit-active {
+    transform-origin: top;
+    transition: opacity 300ms linear, transform 300ms @transition;
+}
+
+/*---------------------------------------fade-------------------------------------------*/
+
+.rs-transition-fade-enter {
+    opacity: 0;
+}
+
+.rs-transition-fade-enter-active {
+    opacity: 1;
+}
+
+.rs-transition-fade-exit {
+    opacity: 1;
+}
+
+.rs-transition-fade-exit-active {
+    opacity: 0;
+}
+
+.rs-transition-fade-enter-active, .rs-transition-fade-exit-active {
+    transition: opacity 300ms linear;
+}
+
+/*---------------------------------------slider-------------------------------------------*/
+
+[direction=horizontal] {
+
+    /*horizontal next*/
+    &.rs-transition-slide-next-enter {
+        transform: translate3d(100%, 0, 0);
+    }
+
+    &.rs-transition-slide-next-enter-active {
+        transform: translate3d(0, 0, 0);
+        transition: transform 150ms linear;
+    }
+
+    /*horizontal prev*/
+    &.rs-transition-slide-prev-enter {
+        transform: translate3d(-100%, 0, 0);
+    }
+
+    &.rs-transition-slide-prev-enter-active {
+        transform: translate3d(0, 0, 0);
+        transition: transform 150ms linear;
+    }
+}
+
+[direction=vertical] {
+
+    /*vertical next*/
+    &.rs-transition-slide-next-enter {
+        transform: translate3d(0, 100%, 0);
+    }
+
+    &.rs-transition-slide-next-enter-active {
+        transform: translate3d(0, 0, 0);
+    }
+
+    /*horizontal prev*/
+    &.rs-transition-slide-prev-enter {
+        transform: translate3d(0, -100%, 0);
+    }
+
+    &.rs-transition-slide-prev-enter-active {
+        transform: translate3d(0, 0, 0);
+        transition: transform 150ms linear;
+    }
+}
+
+.rs-collapse-transition {
+    transition: 0.3s height linear, 0.3s padding-top linear, 0.3s padding-bottom linear;
+}
