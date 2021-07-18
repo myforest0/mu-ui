@@ -4,8 +4,8 @@
   "files": [
     "lib",
     "es",
-    "packages",
-    "style"
+    "styles",
+    "packages"
   ],
   "scripts": {
     "build": "rollup --config ./build/rollup.config.js"
@@ -20,6 +20,8 @@
     "@rollup/plugin-node-resolve": "^13.0.2",
     "@types/react": "^17.0.14",
     "lerna": "^4.0.0",
+    "less": "^4.1.1",
+    "postcss": "^8.3.5",
     "rollup": "^2.53.2",
     "rollup-plugin-clear": "^2.0.7",
     "rollup-plugin-postcss": "^4.0.0",
