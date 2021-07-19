@@ -12,6 +12,7 @@
 /es
 /lib
 /style
+/storybook-static
 
 # misc
 .DS_Store
