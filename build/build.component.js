@@ -22,7 +22,7 @@ const getOutFile = (compName, dir = 'lib') => {
 }
 const inputs = getPackagesSync()
   .map((pkg) => pkg.name)
-  .filter((name) => !name.includes('style'))
+  .filter((name) => !['style', 'utils'].includes(name))
 
 export default inputs.map((name) => {
   return {

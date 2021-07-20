@@ -11,8 +11,8 @@
     "build:component": "rollup --config ./build/build.component.js",
     "build:less": "gulp build --gulpfile ./build/build.less.js",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
-    "deploy-storybook": "gh-pages -d storybook-static --branch docs"
+    "build:storybook": "build-storybook",
+    "deploy:storybook": "gh-pages -d storybook-static --branch docs"
   },
   "devDependencies": {
     "@babel/core": "^7.14.6",
