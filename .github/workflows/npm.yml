@@ -27,7 +27,7 @@ jobs:
   build-and-deploy:
     name: Build and Deploy
     runs-on: ubuntu-latest
-    environment: docs-site
+    environment: npm package
     steps:
     - uses: actions/checkout@v2
     - name: Use Node.js ${{ env.NODE_VERSION }}
@@ -37,7 +37,5 @@ jobs:
     - name: npm install, build, and test
       run: |
         npm install
-        npm run build:storybook
-        npm run deploy:storybook
-        # npm run test --if-present
-
+        npm run build:component
+        npm run build:less
