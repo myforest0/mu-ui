@@ -1,5 +1,5 @@
 <div align='center'>
-    <h1>Resonance-UI</h1>
+    <h1>Resonance UI</h1>
     <p>定制化的React UI组件库</p>
 </div>
 
